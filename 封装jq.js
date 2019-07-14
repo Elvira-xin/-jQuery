@@ -55,6 +55,40 @@
     }
 
 
+
+    /**
+     * jq里面添加类名
+     * jq对象.addClass(类名)
+     */
+     Init.prototype.addClass=function(className){
+         this.each(function(i,e){
+            e.classList.add(className);
+         })
+         return this;
+     }
+
+
+     /**
+      * jq里面移除类名
+      * jq对象.removeClass(类名)
+      */
+     Init.prototype.removeClass=function(className){
+        this.each(function(i,e){
+            e.classList.remove(className);
+        })
+        return this;
+     }
+
+     /**
+      * jq里面的类名切换
+      * jq对象.toggleClass(类名)
+      */
+     Init.prototype.toggleClass=function(className){
+         this.each(function(i,e){
+             e.classList.toggle(className);
+         })
+         return this;
+     }
     //把封装的jQuery函数变成window的一个属性，让外面可以使用
     window.$ = window.jQuery = jQuery;
 })()
