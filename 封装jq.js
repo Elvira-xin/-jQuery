@@ -40,11 +40,13 @@
                     if (pxArr.indexOf(prototype) !== -1) {
                         //判断是否带了单位
                         if (value.toString().indexOf('px') === -1) {
-                            //需要带单位
+                            //带了单位
                             this[i].style[prototype] = value + 'px';
+                            //没有带单位
                         } else {
                             this[i].style[prototype] = value;
                         }
+                        //不需要带单位
                     } else {
                         this[i].style[prototype] = value;
                     }
